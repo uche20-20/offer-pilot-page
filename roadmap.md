@@ -1,3 +1,3 @@
 - [x] Recreate the reference offer page on the home screen.
-- [ ] Update the reward amount, CTA destination, and footer disclosure as requested.
-- [ ] Verify the updated offer page on desktop and mobile.
+- [x] Update the reward amount, CTA destination, and footer disclosure as requested.
+- [x] Verify the updated offer page on desktop and mobile.
