@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "DoorDash Reward Offer — $500 Digital Reward" },
+      { title: "DoorDash Reward Offer — $750 Digital Reward" },
       {
         name: "description",
-        content: "Review the steps and terms for this independent $500 DoorDash reward offer.",
+        content: "Review the steps and terms for this independent $750 DoorDash reward offer.",
       },
-      { property: "og:title", content: "DoorDash Reward Offer — $500 Digital Reward" },
+      { property: "og:title", content: "DoorDash Reward Offer — $750 Digital Reward" },
       {
         property: "og:description",
-        content: "Review the steps and terms for this independent $500 DoorDash reward offer.",
+        content: "Review the steps and terms for this independent $750 DoorDash reward offer.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [shareMessage, setShareMessage] = useState("");
-  const offerUrl = "https://trksy.org/aff_c?offer_id=3463&aff_id=31368";
+  const offerUrl = "https://giftclick.org/aff_c?offer_id=1398&aff_id=31368";
   const shareText = "I just claimed my DoorDash reward! Grab yours before it ends:";
   const steps = [
     'Tap “Start now”',
@@ -60,7 +60,7 @@ function Index() {
               Exclusive Reward
             </span>
             <h1 className="text-4xl font-black leading-[1.05] sm:text-5xl">
-              Claim Your <span className="text-reward-red">$500</span> DoorDash Reward
+              Claim Your <span className="text-reward-red">$750</span> DoorDash Reward
             </h1>
             <p className="text-base leading-relaxed text-muted-foreground">
               Complete the required steps below to continue toward your reward.
@@ -72,7 +72,7 @@ function Index() {
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
                 DoorDash Reward
               </p>
-              <p className="text-5xl font-black leading-none sm:text-6xl">$500</p>
+              <p className="text-5xl font-black leading-none sm:text-6xl">$750</p>
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-reward-red">
                 Digital Reward
               </p>
@@ -169,9 +169,8 @@ function Index() {
       <footer className="bg-foreground px-5 py-7 text-background">
         <div className="mx-auto max-w-md space-y-4 text-center">
           <p className="text-xs leading-relaxed opacity-80">
-            This is an independent promotional offer and is not affiliated with, sponsored by, or
-            endorsed by DoorDash. Participation may require completing partner offers. Review all
-            terms and eligibility requirements before participating.
+            DoorDash is a registered trademark of DoorDash, Inc. This offer is independent and is not
+            affiliated with or endorsed by DoorDash.
           </p>
           <nav aria-label="Legal information" className="flex justify-center gap-3 text-xs opacity-90">
             <a href="#official-rules" className="transition-opacity hover:opacity-70">
