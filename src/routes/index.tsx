@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Facebook, Instagram, Twitter, ArrowUpRight } from "lucide-react";
+import { Facebook, Instagram, Twitter, ArrowUpRight, Gift, Snowflake, TreePine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -56,9 +56,14 @@ function Index() {
       <section className="flex min-h-screen flex-col justify-center px-5 py-12 sm:py-16">
         <div className="mx-auto w-full max-w-md space-y-6">
           <header className="space-y-3 text-center">
-            <span className="text-xs font-extrabold uppercase tracking-[0.15em] text-reward-red">
+            <div className="holiday-kicker mx-auto inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-bold">
+              <Snowflake aria-hidden="true" className="size-3.5" />
+              A little something for the holidays
+              <Snowflake aria-hidden="true" className="size-3.5" />
+            </div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.15em] text-reward-red">
               Exclusive Reward
-            </span>
+            </p>
             <h1 className="text-4xl font-black leading-[1.05] sm:text-5xl">
               Claim Your <span className="text-reward-red">$750</span> DoorDash Reward
             </h1>
@@ -67,10 +72,11 @@ function Index() {
             </p>
           </header>
 
-          <div className="space-y-5 rounded-xl border border-border bg-card p-5 text-center shadow-reward-card sm:p-6">
+          <div className="holiday-card space-y-5 rounded-xl border border-holiday-green/20 bg-card p-5 text-center shadow-reward-card sm:p-6">
             <div className="space-y-1">
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-                DoorDash Reward
+              <p className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
+                <Gift aria-hidden="true" className="size-4 text-holiday-green" />
+                A festive DoorDash reward
               </p>
               <p className="text-5xl font-black leading-none sm:text-6xl">$750</p>
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-reward-red">
@@ -85,7 +91,7 @@ function Index() {
               <ol className="space-y-2.5 text-left">
                 {steps.map((step, index) => (
                   <li key={step} className="flex items-start gap-3 text-sm leading-snug">
-                    <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-reward-red/10 text-[10px] font-bold text-reward-red">
+                    <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-holiday-green/10 text-[10px] font-bold text-holiday-green">
                       {index + 1}
                     </span>
                     <span>{step}</span>
@@ -98,9 +104,9 @@ function Index() {
           <div className="space-y-3 text-center">
             <Button
               onClick={() => window.open(offerUrl, "_blank", "noopener,noreferrer")}
-              className="h-auto w-full rounded-xl bg-reward-red py-5 text-base font-bold text-primary-foreground shadow-reward-glow transition-transform hover:-translate-y-0.5 hover:bg-reward-red/90 active:scale-[0.98]"
+              className="h-auto w-full rounded-xl bg-holiday-green py-5 text-base font-bold text-holiday-foreground shadow-holiday-glow transition-transform hover:-translate-y-0.5 hover:bg-holiday-green/90 active:scale-[0.98]"
             >
-              Start now <ArrowUpRight aria-hidden="true" />
+              Start now <TreePine aria-hidden="true" /> <ArrowUpRight aria-hidden="true" />
             </Button>
             <p className="text-xs leading-relaxed text-muted-foreground">
               Offer requirements and eligibility may vary. Review the terms before participating.
@@ -109,9 +115,13 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-muted px-5 py-10">
+      <section className="holiday-share bg-muted px-5 py-10">
         <div className="mx-auto max-w-md text-center">
-          <h2 className="text-xl font-black">Share &amp; Boost Your Entry</h2>
+          <h2 className="flex items-center justify-center gap-2 text-xl font-black">
+            <TreePine aria-hidden="true" className="size-5 text-holiday-green" />
+            Share &amp; Boost Your Entry
+            <TreePine aria-hidden="true" className="size-5 text-holiday-green" />
+          </h2>
           <p className="mb-6 mt-1 text-sm text-muted-foreground">Share for bonus chances.</p>
           <div className="grid grid-cols-3 gap-4">
             <Button
@@ -166,7 +176,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="bg-foreground px-5 py-7 text-background">
+      <footer className="holiday-footer bg-foreground px-5 py-7 text-background">
         <div className="mx-auto max-w-md space-y-4 text-center">
           <p className="text-xs leading-relaxed opacity-80">
             DoorDash is a registered trademark of DoorDash, Inc. This offer is independent and is not

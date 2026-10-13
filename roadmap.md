@@ -1,3 +1,4 @@
 - [x] Recreate the reference offer page on the home screen.
 - [x] Update the reward amount, CTA destination, and footer disclosure as requested.
 - [x] Verify the updated offer page on desktop and mobile.
+- [x] Apply a subtle Christmas theme to the existing offer page.

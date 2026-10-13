@@ -60,15 +60,21 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-reward-red: var(--reward-red);
+  --color-holiday-green: var(--holiday-green);
+  --color-holiday-foreground: var(--holiday-foreground);
   --shadow-reward-card: var(--reward-shadow-card);
   --shadow-reward-glow: var(--reward-shadow-glow);
+  --shadow-holiday-glow: var(--holiday-shadow-glow);
 }
 
 :root {
   --radius: 0.625rem;
   --reward-red: oklch(0.59 0.21 23);
+  --holiday-green: oklch(0.39 0.09 155);
+  --holiday-foreground: oklch(1 0 0);
   --reward-shadow-card: 0 4px 16px -4px oklch(0 0 0 / 0.08), 0 2px 6px -2px oklch(0 0 0 / 0.04);
   --reward-shadow-glow: 0 10px 30px -12px oklch(0.59 0.21 23 / 0.35);
+  --holiday-shadow-glow: 0 10px 30px -12px oklch(0.39 0.09 155 / 0.32);
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0 0);
   --card: oklch(1 0 0);
@@ -146,5 +152,39 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+.reward-page {
+  background-image: radial-gradient(ellipse at 50% 4%, oklch(0.95 0.04 145 / 0.42), transparent 34rem);
+}
+
+.holiday-kicker {
+  border-color: oklch(0.39 0.09 155 / 0.18);
+  background: oklch(0.95 0.04 145 / 0.56);
+  color: var(--holiday-green);
+}
+
+.holiday-card {
+  background-image: linear-gradient(145deg, oklch(0.98 0.02 145 / 0.36), transparent 44%);
+}
+
+.holiday-share {
+  background-image: linear-gradient(180deg, oklch(0.96 0.03 145 / 0.52), var(--muted));
+}
+
+.holiday-footer {
+  background-image: linear-gradient(110deg, oklch(0.29 0.07 155), var(--foreground) 70%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reward-page::before {
+    position: absolute;
+    top: 1.25rem;
+    right: max(1.25rem, calc((100vw - 28rem) / 2));
+    color: oklch(0.39 0.09 155 / 0.35);
+    content: "✦";
+    font-size: 1.25rem;
+    pointer-events: none;
   }
 }
