@@ -106,7 +106,7 @@ function Index() {
               onClick={() => window.open(offerUrl, "_blank", "noopener,noreferrer")}
               className="h-auto w-full rounded-xl bg-holiday-green py-5 text-base font-bold text-holiday-foreground shadow-holiday-glow transition-transform hover:-translate-y-0.5 hover:bg-holiday-green/90 active:scale-[0.98]"
             >
-              Start now <TreePine aria-hidden="true" /> <ArrowUpRight aria-hidden="true" />
+              Claim now <TreePine aria-hidden="true" /> <ArrowUpRight aria-hidden="true" />
             </Button>
             <p className="text-xs leading-relaxed text-muted-foreground">
               Offer requirements and eligibility may vary. Review the terms before participating.
